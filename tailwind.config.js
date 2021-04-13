@@ -1,5 +1,11 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  // purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    options: {
+      safelist: ['bg-my-99c9e0', 'bg-my-9a99e0', 'bg-my-f5c964', 'bg-my-aed686', 'transition-all', 'duration-1500'],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -65,5 +71,6 @@ module.exports = {
       backgroundColor: ['active'],
     },
   },
+  // whitelistPatterns: [/99c9e0/, /9a99e0/, /f5c964/, /aed686/, 'transition-all', /duration/],
   plugins: [],
 };

@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { YMaps, Map } from 'react-yandex-maps';
+import dynamic from 'next/dynamic';
+
+const YandexMap = dynamic(() => import('./YandexMap'), { loading: () => <div>Загрузка...</div> });
 
 const Footer = () => {
   return (
@@ -25,11 +27,7 @@ const Footer = () => {
         <div className="mb-10">+7 (978) 222-86-40</div>
         <div>Симферополь, проспект Победы, 44-Б</div>
       </div>
-      <div className="h-340px w-665px max-w-full">
-        <YMaps>
-          <Map defaultState={{ center: [44.96153, 34.116506], zoom: 15 }} width="100%" height="100%" />
-        </YMaps>
-      </div>
+      <YandexMap />
     </footer>
   );
 };
