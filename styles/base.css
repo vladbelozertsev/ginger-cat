@@ -1,9 +1,11 @@
 @layer base {
+  /* https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools */
   @font-face {
     font-family: 'fontello';
     src: url('/fonts/fontello.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -11,6 +13,7 @@
     src: url('/fonts/BalsamiqSans-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -18,6 +21,7 @@
     src: url('/fonts/BalsamiqSans-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
   }
 
   html {

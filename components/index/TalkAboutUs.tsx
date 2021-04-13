@@ -1,5 +1,8 @@
 import React from 'react';
-import TalkAboutUsSwiper from './TalkAboutUsSwiper';
+// import TalkAboutUsSwiper from './TalkAboutUsSwiper';
+import dynamic from 'next/dynamic';
+
+const TalkAboutUsSwiper = dynamic(() => import('./TalkAboutUsSwiper'));
 
 const TalkAboutUs = () => {
   return (
