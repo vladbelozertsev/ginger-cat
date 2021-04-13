@@ -1,0 +1,35 @@
+@layer base {
+  @font-face {
+    font-family: 'fontello';
+    src: url('/fonts/fontello.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('/fonts/BalsamiqSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('/fonts/BalsamiqSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  html {
+    @apply bg-gray-100 font-main text-my-3d3d3d;
+    background-image: url('/images/bg.png');
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  strong {
+    @apply font-bold;
+  }
+}

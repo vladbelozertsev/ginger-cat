@@ -1,0 +1,12 @@
+/* https://stackoverflow.com/questions/60854215/tailwind-use-font-from-local-files-globally */
+/* https://stackoverflow.com/questions/61425153/loading-custom-fonts-in-nuxt-tailwind-project */
+/* https://github.com/tailwindlabs/tailwindcss/discussions/1611 */
+/* https://stackoverflow.com/questions/54618144/tailwind-css-how-to-code-pixel-perfect-design */
+/* https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+/* https://tailwindcss.com/docs/functions-and-directives */
+/* https://stackoverflow.com/questions/40976874/what-is-the-difference-between-css-import-and-sass-scss-import#:~:text=Whereas%2C,file%20to%20the%20web%20browser. */
+/* https://stackoverflow.com/questions/53292355/import-css-and-sass-files-nextjs-7 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

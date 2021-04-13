@@ -1,0 +1,47 @@
+import Image from 'next/image';
+import { QueryClient, useQuery } from 'react-query';
+import { dehydrate } from 'react-query/hydration';
+
+const getUsers = async () => {
+  const response = await fetch('https://reqres.in/api/users?page=2');
+  return await response.json();
+};
+
+const Index = () => {
+  const { data } = useQuery('users', getUsers);
+
+  console.log(123321);
+  console.log('data: ', data);
+
+  const showData = () => {
+    console.log(data);
+  };
+
+  return (
+    <div className="bg-red-500">
+      <button onClick={showData}>Show data</button>
+      <div className="font-icon">&#xf099;</div>
+      <div>
+        <Image src="/images/discount-a.png" alt="Picture of the author" width={500} height={500} priority />
+      </div>
+    </div>
+  );
+};
+
+export const getStaticProps = async () => {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery('users', getUsers);
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+};
+
+export default Index;
+
+
+https://www.figma.com/file/9HNfvncfZWlOei2IJyo6YP/%D0%9E%D0%9E%D0%9E-%D0%A0%D0%B0%D0%BA%D1%83%D1%80%D1%81?node-id=528%3A380
+https://stackoverflow.com/questions/34189370/how-to-repeat-an-element-n-times-using-jsx - повторить элемент n раз

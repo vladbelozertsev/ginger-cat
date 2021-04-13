@@ -1,0 +1,51 @@
+@layer components {
+  .btn {
+    @apply active:bg-red-500
+    bg-my-ec9c25
+    focus:outline-none
+    hover:bg-yellow-500
+    inline-flex
+    items-center
+    justify-center
+    max-w-full
+    outline-none
+    rounded-3xl
+    text-base
+    text-white
+    w-64;
+  }
+
+  .btn .btn__image {
+    @apply -ml-8;
+  }
+
+  .swiper-btn {
+    @apply absolute
+    bg-gray-50
+    flex
+    focus:outline-none
+    font-icon
+    h-12
+    items-center
+    justify-center
+    outline-none
+    rounded-full
+    select-none
+    text-3xl
+    text-blue-600
+    top-1/2
+    w-12;
+  }
+
+  .swiper-btn-prev {
+    @apply swiper-btn left-3;
+  }
+
+  .swiper-btn-next {
+    @apply swiper-btn right-3;
+  }
+
+  .noselect {
+    @apply outline-none focus:outline-none select-none;
+  }
+}
