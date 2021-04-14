@@ -45,3 +45,4 @@ export default Index;
 
 https://www.figma.com/file/9HNfvncfZWlOei2IJyo6YP/%D0%9E%D0%9E%D0%9E-%D0%A0%D0%B0%D0%BA%D1%83%D1%80%D1%81?node-id=528%3A380
 https://stackoverflow.com/questions/34189370/how-to-repeat-an-element-n-times-using-jsx - повторить элемент n раз
+https://www.youtube.com/watch?v=j8NJc60H294

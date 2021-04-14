@@ -1,10 +1,10 @@
-import TalkAboutUs from 'components/index/TalkAboutUs';
 import Graduation from 'components/index/Graduation';
+import Head from 'next/head';
 import HolidayAddition from 'components/index/HolidayAddition';
 import MainLayout from 'components/_layouts/MainLayout';
 import Partners from 'components/index/Partners';
+import TalkAboutUs from 'components/index/TalkAboutUs';
 import Team from 'components/index/Team';
-import Head from 'next/head';
 
 const Index = () => {
   return (

@@ -1,13 +1,24 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import useInView from 'utils/use-viewport';
+import { useEffect, useRef, useState } from 'react';
 
-const YandexMap = dynamic(() => import('./YandexMap'), { loading: () => <div>Загрузка...</div> });
+const YandexMap = dynamic(() => import('./YandexMap'));
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const isFooterInView = useInView(footerRef);
+  const [mapNeedLoad, setMapNeedLoad] = useState(false);
+
+  useEffect(() => {
+    if (isFooterInView && !mapNeedLoad) setMapNeedLoad(true);
+  }, [isFooterInView]);
+
   return (
     <footer
       className="px-48 bg-cover py-32 text-white flex"
       style={{ backgroundImage: 'url("/images/footer-bg.png")' }}
+      ref={footerRef}
     >
       <div className="mr-32">
         <div className="mb-10">
@@ -27,7 +38,7 @@ const Footer = () => {
         <div className="mb-10">+7 (978) 222-86-40</div>
         <div>Симферополь, проспект Победы, 44-Б</div>
       </div>
-      <YandexMap />
+      {mapNeedLoad ? <YandexMap /> : null}
     </footer>
   );
 };

@@ -1,7 +1,4 @@
-// import TeamSwiper from './TeamSwiper';
-import dynamic from 'next/dynamic';
-
-const TeamSwiper = dynamic(() => import('./TeamSwiper'));
+import TeamSwiper from './TeamSwiper';
 
 const Team = () => {
   return (

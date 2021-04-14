@@ -2,6 +2,8 @@ import React from 'react';
 import { YMaps, Map } from 'react-yandex-maps';
 
 const YandexMap = () => {
+  console.log('YandexMap');
+
   return (
     <div className="h-340px w-665px max-w-full">
       <YMaps>
